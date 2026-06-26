@@ -9,7 +9,6 @@ from scraper import get_id_json_data
 
 file_name = "csv_data/data.csv"
 
-# 🕒 Freeze the timestamp EXACTLY when the script starts running!
 RUN_TIMESTAMP = datetime.now().strftime("%Y-%m-%d_%H-%M")
 DYNAMIC_CHANGES_FILE = f"csv_data/changes_{RUN_TIMESTAMP}.csv"
 
@@ -217,7 +216,6 @@ def save_price_change(passed_sku , old_price , new_price):
 
         os.makedirs("csv_data", exist_ok=True)
 
-    # 🔒 Uses the frozen file path, no matter how many minutes pass!
     with open(DYNAMIC_CHANGES_FILE , "a" , newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file , fieldnames=updated_headers)
         if file.tell() == 0:
