@@ -4,7 +4,7 @@ An async Python scraper that tracks product prices on Flipkart for any iPhone se
 
 ## Features
 
-- **Dynamic search** — enter any product query (e.g. `iphone 17 pro max`) and the scraper builds the search URL automatically
+- **Dynamic search** — enter any product query (e.g. `17 pro max`) and the scraper builds the search URL automatically , caution : putting " iphone " in starting can cause double naming so please only enter the model number ex: 17,16 etc ..
 - **Full pagination** — dynamically detects total page count and scrapes every page, no hardcoded limits
 - **Async multi-tab scraping** — runs 5 browser tabs in parallel using `asyncio.gather()` for faster throughput
 - **Structured data extraction** — pulls SKU, name, color, rating, price, currency, and availability directly from each product page's JSON-LD (`application/ld+json`) data
